@@ -1,0 +1,43 @@
+<form [formGroup]="altaHospedajeForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="descripcion">Descripción</label>
+    <input id="descripcion" formControlName="descripcion" type="text">
+  </div>
+  <div>
+    <label for="precioPorNoche">Precio por Noche</label>
+    <input id="precioPorNoche" formControlName="precioPorNoche" type="number">
+  </div>
+  <div>
+    <label for="imagen">Imagen</label>
+    <input id="imagen" formControlName="imagen" type="text">
+  </div>
+  <div>
+    <label for="ciudadId">Ciudad</label>
+    <select id="ciudadId" formControlName="ciudadId">
+      <option *ngFor="let ciudad of ciudades" [value]="ciudad.id">{{ ciudad.nombre }}</option>
+    </select>
+  </div>
+  <div>
+    <label for="tipoHospedajeId">Tipo de Hospedaje</label>
+    <select id="tipoHospedajeId" formControlName="tipoHospedajeId">
+      <option *ngFor="let tipo of tiposHospedaje" [value]="tipo.id">{{ tipo.nombre }}</option>
+    </select>
+  </div>
+  <div>
+    <mat-form-field appearance="outline">
+      <mat-label>Servicios</mat-label>
+      <mat-select formControlName="serviciosIds" multiple>
+        <mat-option *ngFor="let servicio of servicios" [value]="servicio.id">{{ servicio.nombre }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <button type="submit">Crear Hospedaje</button>
+</form>
+
+
+
+
+<!-- <label for="serviciosIds">Servicios</label>
+<select id="serviciosIds" formControlName="serviciosIds" multiple>
+  <option *ngFor="let servicio of servicios" [value]="servicio.id">{{ servicio.nombre }}</option>
+</select>  -->

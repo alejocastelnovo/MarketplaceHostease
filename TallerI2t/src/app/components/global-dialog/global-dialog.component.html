@@ -1,0 +1,72 @@
+<div class="dialog-container">
+
+  <!-- DIALOGS DEL ANFITRION -->
+
+  <ng-container *ngIf="MostrarDialogo === 'alta'">
+    <h2 id="titulo-dialogo">Alta del hospedaje</h2>
+    <p id="texto-dialogo">Selecciona una opción:</p>
+    <app-alta-hospedaje></app-alta-hospedaje>
+    <button mat-raised-button color="warn" (click)="onClose()">Cerrar</button>
+  </ng-container>
+
+  <ng-container *ngIf="MostrarDialogo === 'modificacion'">
+    <h2 id="titulo-dialogo">Modificacion del hospedaje</h2>
+    <p id="texto-dialogo">Selecciona una opción:</p>
+    <app-lista-hospedajes></app-lista-hospedajes>
+    <button mat-raised-button color="warn" (click)="onClose()">Cerrar</button>
+  </ng-container>
+
+  <ng-container *ngIf="MostrarDialogo === 'eliminar'">
+    <h2 id="titulo-dialogo">Eliminar un hospedaje</h2>
+    <p id="texto-dialogo">Selecciona una opción:</p>
+    <app-eliminar-hospedaje></app-eliminar-hospedaje>
+    <button mat-raised-button color="warn" (click)="onClose()">Cerrar</button>
+  </ng-container>
+
+
+  <!-- DIALOGS DEL INQUILINO -->
+
+  <ng-container *ngIf="MostrarDialogo === 'reservarhospedaje'">
+    <h2 id="titulo-dialogo">Reserva del hospedaje</h2>
+    <p id="texto-dialogo">Selecciona una opción:</p>
+    <app-reservar-hospedaje></app-reservar-hospedaje>
+    <button mat-raised-button color="warn" (click)="onClose()">Cerrar</button>
+  </ng-container>
+
+  <ng-container *ngIf="MostrarDialogo === 'modificarreserva'">
+    <h2 id="titulo-dialogo">Reserva del hospedaje</h2>
+    <p id="texto-dialogo">Selecciona una opción:</p>
+    <app-modificar-reserva></app-modificar-reserva>
+    <button mat-raised-button color="warn" (click)="onClose()">Cerrar</button>
+  </ng-container>
+
+  <ng-container *ngIf="MostrarDialogo === 'cancelarreserva'">
+    <h2 id="titulo-dialogo">Reserva del hospedaje</h2>
+    <p id="texto-dialogo">Selecciona una opción:</p>
+    <app-cancelar-reserva></app-cancelar-reserva>
+    <button mat-raised-button color="warn" (click)="onClose()">Cerrar</button>
+  </ng-container>
+
+<!-- DIALOGS DEL ADMINISTRADOR -->
+
+<ng-container *ngIf="MostrarDialogo === 'alta-servicio'">
+  <h2 id="titulo-dialogo">Alta de servicio</h2>
+  <p id="texto-dialogo">Selecciona una opción:</p>
+  <app-alta-servicio></app-alta-servicio>
+  <button mat-raised-button color="warn" (click)="onClose()">Cerrar</button>
+</ng-container>
+
+<ng-container *ngIf="MostrarDialogo === 'modificacion-servicio'">
+  <h2 id="titulo-dialogo">Modificacion de servicio</h2>
+  <p id="texto-dialogo">Selecciona una opción:</p>
+  <app-modificacion-servicio></app-modificacion-servicio>
+  <button mat-raised-button color="warn" (click)="onClose()">Cerrar</button>
+</ng-container>
+
+<ng-container *ngIf="MostrarDialogo === 'eliminacion-servicio'">
+  <h2 id="titulo-dialogo">Eliminacion de servicio</h2>
+  <p id="texto-dialogo">Selecciona una opción:</p>
+  <app-eliminacion-servicio></app-eliminacion-servicio>
+  <button mat-raised-button color="warn" (click)="onClose()">Cerrar</button>
+</ng-container>
+</div>

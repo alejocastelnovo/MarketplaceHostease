@@ -1,0 +1,76 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    background-color: rgb(255, 250, 239);
+    position: relative;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    height: 70px;
+}
+
+.header:hover {
+    background-color: rgb(255, 240, 220);
+}
+
+.home {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.cerrar-sesion {
+    font-size: 16px;
+    color: rgb(5, 140, 66);
+    transition: color 0.3s ease;
+}
+
+
+.info-icon {
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    font-size: 42px;
+    transition: color 0.3s ease;
+    width: auto;
+    height:auto;
+}
+
+.info-icon:hover {
+    color: rgb(0, 123, 255);
+}
+
+.cerrar-sesion:hover {
+    color: rgb(255, 69, 58);
+}
+
+
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url('src/assets/turismo-background.jpeg');
+    background-size: cover;
+    color: white;
+    text-align: center;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.configuracion-texto {
+    font-size: 18px;
+    margin-left: 10px;
+}
+
+
+button {
+    margin: 10px;
+}
